@@ -1,2 +1,0 @@
-testretailer1 www.google.com
-testretailer2 www.amazon.ca
