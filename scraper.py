@@ -1,9 +1,20 @@
-# scraper.py
-import requests 
-import pprint
+from requests_html import HTMLSession
+from urls import parse_urls
 
-URL = 'http://www.nhl66.ir/'
+# TODO: Implement this function
+def get_page_content(session, url):
+    response = session.get(url)
+    return response
 
-page = requests.get(URL)
+# TODO: Implement this function
+def get_info(content, parser):
+    pass
 
-pprint.pprint(page.text)
+def main():
+    URLS = parse_urls.get_urls('./urls/data/')
+
+    session = HTMLSession()
+    get_page_content(session, URLS['XBOX_SERIES_S_URLS'][0]['url']) 
+    
+if __name__ == "__main__":
+   main()
