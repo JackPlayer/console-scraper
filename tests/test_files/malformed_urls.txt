@@ -1,0 +1,2 @@
+testretailer 1 www.amazon.ca
+testretailer2 
