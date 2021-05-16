@@ -1,5 +1,3 @@
-#pi-form > div.col-12.py-2 > div.pi-prod-availability > span:nth-child(2)
-
 def is_in_stock(res_obj):
     selector = '#pi-form > div.col-12.py-2 > div.pi-prod-availability > span:nth-child(2)'
     stock = res_obj.html.find(selector, first=True).text
