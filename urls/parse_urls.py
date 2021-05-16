@@ -1,6 +1,6 @@
 def parse_file(file_path):
     file = open(file_path)
-    retailer_list = []
+    retailer_dict = {}
 
     for line in file:
         try: 
@@ -9,11 +9,11 @@ def parse_file(file_path):
                 raise Exception(f'[Malformed URL File]: File - {file_path} | Line - {line}')
             [retailer, url] = line.split()
             
-            retailer_list.append({"retailer": retailer, "url": url})
+            retailer_dict[retailer] = url
         except:
             file.close()
     file.close()
-    return retailer_list
+    return retailer_dict
 
 def get_urls(base_dir):
     XBOX_SERIES_X_URLS = parse_file(f'{base_dir}xbox_series_x_urls.txt')
