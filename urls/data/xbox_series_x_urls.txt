@@ -1,6 +1,5 @@
 costco https://www.costco.ca/xbox-series-x-with-wireless-controller.product.100754517.html
-walmart https://www.walmart.ca/en/ip/2020-New-Xbox-Series-X-1TB-SSD-Console-Bundle-with-Watch-Dogs-Legion/PRD350MXTAYF3MX
 microsoft https://www.microsoft.com/en-ca/store/b/xbox
 canadacomputers https://www.canadacomputers.com/product_info.php?cPath=13_1860_1862&item_id=184244
-newegg https://www.newegg.ca/p/2WK-0004-002X3
+newegg https://www.newegg.ca/p/N82E16868105273?Description=xbox%20series%20x&cm_re=xbox_series%20x-_-68-105-273-_-Product
 bestbuy https://www.bestbuy.ca/en-ca/product/xbox-series-x-1tb-console-online-only/14964951
