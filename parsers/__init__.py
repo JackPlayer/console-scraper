@@ -1,2 +1,2 @@
-import parsers.londondrugs
+import parsers.bestbuy
 import parsers.canadacomputers

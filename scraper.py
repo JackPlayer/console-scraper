@@ -6,10 +6,10 @@ from requests_html import HTMLSession
 def main():
     URLS = urls.parse_urls.get_urls('./urls/data/')
     session = HTMLSession()
-    response = session.get(URLS['XBOX_SERIES_X_URLS']['canadacomputers'])
-    response.html.render(timeout=10, sleep=7)
+    response = session.get(URLS['XBOX_SERIES_X_URLS']['bestbuy'])
+    response.html.render(timeout=20, sleep=7)
 
-    info = parsers.canadacomputers.parse(response)
+    info = parsers.bestbuy.parse(response)
     print(info)
 if __name__ == "__main__":
    main()
