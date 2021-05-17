@@ -1,5 +1,6 @@
 import parsers
 import urls
+import interface
 
 from requests_html import HTMLSession
 
@@ -37,6 +38,7 @@ def main():
     URLS = urls.parse_urls.get_urls('./urls/data/')
     info_list = get_info_all_retailers(URLS, 'XBOX_SERIES_X_URLS')
 
-    print(info_list)
+    interface.ui.print_table('XBOX SERIES X', info_list)
+
 if __name__ == "__main__":
    main()

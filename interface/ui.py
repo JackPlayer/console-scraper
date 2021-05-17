@@ -1,8 +1,11 @@
 from columnar import columnar
 
-def print_table(name, data):
-    modified_data = bool_to_string_list(data)
-    table = columnar(modified_data, headers=['PRICE', 'IN STOCK', 'RETAILER'], no_borders=True)
+def print_table(name, raw_data):
+    formatted_data = convert_to_lists(raw_data)
+    formatted_data_modified_bools = bool_to_string_list(formatted_data)
+    print(formatted_data_modified_bools)
+    table = columnar(formatted_data_modified_bools, headers=['PRICE', 'IN STOCK', 'RETAILER'], no_borders=True)
+
     print(name)
     print(table)
 
@@ -25,6 +28,8 @@ def bool_to_string(bool):
 def bool_to_string_list(list):
     list_copy = list.copy()
     for i,entry in enumerate(list):
+        if entry == None: 
+            continue
         for j, value in enumerate(entry):
             if type(value) is bool:
                 list_copy[i][j] = bool_to_string(value)
