@@ -7,7 +7,6 @@ def is_in_stock(res_obj):
     selector = '#root > div > div.x-page-content.container_3Sp8P > div.x-product-detail-page > div.row_1mOdd > div.col-xs-12_198le.col-sm-6_1okfB.col-md-4_3LwCi.collapseColContainer_2eCPT > div:nth-child(6) > div > div > div > p > span'
     stock = res_obj.html.find(selector, first=True)
 
-    print(stock.text)
     if stock.text == 'Coming soon' or stock.text == 'Sold out online':
         return False
     return True

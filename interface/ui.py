@@ -1,13 +1,19 @@
 from columnar import columnar
 
 def print_table(name, raw_data):
+    print(format_name(name))
+
+    if (len(raw_data) == 0):
+        print("No data found")
+        return
+
     formatted_data = convert_to_lists(raw_data)
     formatted_data_modified_bools = bool_to_string_list(formatted_data)
-    print(formatted_data_modified_bools)
     table = columnar(formatted_data_modified_bools, headers=['PRICE', 'IN STOCK', 'RETAILER'], no_borders=True)
-
-    print(name)
     print(table)
+
+def format_name(raw_name):
+    return raw_name.replace('_', ' ').replace(' URLS', '')
 
 def dict_to_list(dict):
     new_list = []
@@ -34,4 +40,3 @@ def bool_to_string_list(list):
             if type(value) is bool:
                 list_copy[i][j] = bool_to_string(value)
     return list_copy
-
